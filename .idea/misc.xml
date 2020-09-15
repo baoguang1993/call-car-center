@@ -5,7 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/car-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/car-core/pom.xml" />
+        <option value="$PROJECT_DIR$/car-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/car-common/pom.xml" />
+        <option value="$PROJECT_DIR$/car-order-def/pom.xml" />
+        <option value="$PROJECT_DIR$/car-order/pom.xml" />
+        <option value="$PROJECT_DIR$/car-customer/pom.xml" />
       </list>
     </option>
   </component>

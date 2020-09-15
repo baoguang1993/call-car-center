@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="call-car-center" />
+        <module name="car-common" />
         <module name="car-core" />
+        <module name="car-customer" />
+        <module name="car-dao" />
+        <module name="car-order" />
+        <module name="car-order-def" />
       </profile>
     </annotationProcessing>
   </component>
