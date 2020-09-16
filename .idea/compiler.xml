@@ -6,13 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="car-common" />
         <module name="car-core" />
         <module name="car-customer" />
         <module name="car-dao" />
         <module name="car-order" />
+        <module name="car-common" />
         <module name="car-order-def" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="car-core" options="-parameters" />
+      <module name="car-customer" options="-parameters" />
+      <module name="car-order" options="-parameters" />
+      <module name="car-order-def" options="-parameters" />
+    </option>
   </component>
 </project>

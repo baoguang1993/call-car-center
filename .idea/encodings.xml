@@ -3,10 +3,21 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-customer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-customer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car-order-def" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-order-def/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
