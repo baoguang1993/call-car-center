@@ -2,10 +2,13 @@ package com.libaoguang.cn.carcustomer.controller;
 
 
 import com.libaoguang.cn.carcommon.vo.ResultVo;
-import com.libaoguang.cn.carorderdef.order.OrderFeignClients;
+import com.libaoguang.cn.carorderdef.def.order.OrderFeignClients;
+import com.libaoguang.cn.carorderdef.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class OrderController {
@@ -13,11 +16,11 @@ public class OrderController {
     private OrderFeignClients orderFeignClients;
 
     @RequestMapping("/api/customer/createOrder")
-    ResultVo createOrder(String requestBody){
+    ResultVo createOrder(String userGuid){
 
-        ResultVo order = orderFeignClients.createOrder(requestBody);
-        System.out.println("order"+order);
-        System.out.println("requestBody:"+requestBody);
-        return ResultVo.successResult();
+        List<OrderDTO> orderDTOList = orderFeignClients.createOrder(userGuid);
+        ResultVo resultVo = ResultVo.successResult(orderDTOList);
+        resultVo.setTotalPage(10);
+        return resultVo;
     }
 }

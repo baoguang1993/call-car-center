@@ -3,12 +3,13 @@ package com.libaoguang.cn.carcommon.vo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.libaoguang.cn.carcommon.enums.ResultEnum;
 import com.libaoguang.cn.carcommon.exception.BaseException;
+import com.libaoguang.cn.carcommon.vo.page.PageVO;
 
 
 import java.io.Serializable;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class ResultVo<T> implements Serializable {
+public class ResultVo<T>  extends PageVO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
@@ -32,6 +33,8 @@ public class ResultVo<T> implements Serializable {
     private String message;
     private String result;
     private T data;
+
+
 
     public String getCode() {
         return code;
@@ -72,6 +75,7 @@ public class ResultVo<T> implements Serializable {
         resultVo.setResult(RESULT_SUCCESS);
         return resultVo;
     }
+
     public static ResultVo successResult(Object object) {
         ResultVo resultVo = new ResultVo();
         resultVo.setCode(CODE_SUCCESS);
@@ -80,6 +84,7 @@ public class ResultVo<T> implements Serializable {
         resultVo.setData(object);
         return resultVo;
     }
+
     public static ResultVo failResult() {
         ResultVo resultVo = new ResultVo();
         resultVo.setCode(CODE_FAIL);
@@ -87,6 +92,7 @@ public class ResultVo<T> implements Serializable {
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
+
     public static ResultVo failResult(String message) {
         ResultVo resultVo = new ResultVo();
         resultVo.setCode(CODE_FAIL);
@@ -94,20 +100,23 @@ public class ResultVo<T> implements Serializable {
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
-    public static ResultVo failResult(String code,String message) {
+
+    public static ResultVo failResult(String code, String message) {
         ResultVo resultVo = new ResultVo();
         resultVo.setCode(code);
         resultVo.setMessage(message);
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
+
     public static ResultVo failResult(BaseException baseException) {
         ResultVo resultVo = new ResultVo();
-        resultVo.setCode(baseException.getCode()+"");
+        resultVo.setCode(baseException.getCode() + "");
         resultVo.setMessage(baseException.getMessage());
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
+
     public static ResultVo unknownResult(String message) {
         ResultVo resultVo = new ResultVo();
         resultVo.setCode("500");
@@ -115,9 +124,10 @@ public class ResultVo<T> implements Serializable {
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
+
     public static ResultVo failResult(ResultEnum resultEnum) {
         ResultVo resultVo = new ResultVo();
-        resultVo.setCode(resultEnum.getCode()+"");
+        resultVo.setCode(resultEnum.getCode() + "");
         resultVo.setMessage(resultEnum.getMsg());
         resultVo.setResult(RESULT_FAIL);
         return resultVo;

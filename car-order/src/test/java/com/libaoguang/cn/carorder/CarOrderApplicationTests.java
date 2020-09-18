@@ -7,8 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CarOrderApplicationTests {
 
-    @Test
-    void contextLoads() {
+    public static void main(String[] args) {
     }
 
 }

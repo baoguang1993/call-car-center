@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @MapperScan(basePackages= {"com.libaoguang.cn.cardao.mapper"})
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.libaoguang.cn.carorderdef.order"})
+@EnableFeignClients(basePackages = {"com.libaoguang.cn.carorderdef.def.order"})
 public class CarCustomerApplication {
 
     public static void main(String[] args) {
