@@ -8,16 +8,17 @@ import lombok.Data;
 import lombok.ToString;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
 @TableName(value = "basis_user")
 @Data
 @ToString
-public class BasisUser {
+public class BasisUser implements Serializable {
 
     //指定自增策略
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private String id;
 
     @TableField(value = "user_address")
     private String userAddress;
@@ -25,6 +26,11 @@ public class BasisUser {
     @TableField(value = "user_name")
     private String userName;
 
+    @TableField(value = "password")
+    private String password;
+
+    @TableField(value = "status")
+    private int status;
 
     @TableField(value = "user_age")
     private int age;
@@ -34,4 +40,6 @@ public class BasisUser {
 
     @TableField(value = "update_time")
     private Date updateTime;
+
+
 }
