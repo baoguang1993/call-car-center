@@ -2,6 +2,7 @@
 <configuration>
     <!--https://www.cnblogs.com/dhqz/p/12869398.html-->
 
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- 对日志进行格式化 -->
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -108,4 +109,6 @@
         <!-- 启动操作日志存储的Appender-->
         <!--<appender-ref ref="MYDB" />-->
     </root>
+     <!-- 过滤心跳检测日志-->
+    <logger name="com.alibaba.nacos.client.naming" level="error"/>
 </configuration>

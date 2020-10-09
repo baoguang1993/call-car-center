@@ -108,4 +108,6 @@
         <!-- 启动操作日志存储的Appender-->
         <!--<appender-ref ref="MYDB" />-->
     </root>
+    <!-- 过滤心跳检测日志-->
+    <logger name="com.alibaba.nacos.client.naming" level="error"/>
 </configuration>
