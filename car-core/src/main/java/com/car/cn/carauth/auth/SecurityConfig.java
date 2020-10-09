@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //定义哪些url需要被保护  哪些不需要保护
                 .authorizeRequests()
                 //定义这两个链接不需要登录可访问
-                .antMatchers("/oauth/token" , "oauth/check_token").permitAll()
+                .antMatchers("/oauth/token" , "/oauth/check_token").permitAll()
                 //定义所有的都不需要登录  目前是测试需要
 //                .antMatchers("/**").permitAll()
                 .anyRequest().authenticated()
