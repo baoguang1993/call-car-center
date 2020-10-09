@@ -5,6 +5,7 @@ import com.libaoguang.cn.carcommon.vo.ResultVo;
 import com.libaoguang.cn.carorderdef.def.order.OrderFeignClients;
 import com.libaoguang.cn.carorderdef.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,8 @@ public class OrderController {
     @Autowired
     private OrderFeignClients orderFeignClients;
 
-    @RequestMapping("/api/customer/createOrder")
+    @RequestMapping("/customer/createOrder")
+    @Secured("ROLE_AA")
     ResultVo createOrder(String userGuid){
 
         List<OrderDTO> orderDTOList = orderFeignClients.createOrder(userGuid);
