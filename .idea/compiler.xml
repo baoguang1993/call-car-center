@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="car-core" />
         <module name="car-customer" />
+        <module name="car-gateway" />
         <module name="car-dao" />
         <module name="car-order" />
         <module name="car-common" />
@@ -17,8 +19,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="car-common" options="-parameters" />
       <module name="car-core" options="-parameters" />
       <module name="car-customer" options="-parameters" />
+      <module name="car-dao" options="-parameters" />
+      <module name="car-gateway" options="-parameters" />
       <module name="car-order" options="-parameters" />
       <module name="car-order-def" options="-parameters" />
     </option>

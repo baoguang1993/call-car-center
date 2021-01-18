@@ -15,6 +15,7 @@
         <relativePath/>
     </parent>
     <modules>
+        <module>car-dao</module>
         <module>car-order</module>
         <module>car-order-def</module>
         <module>car-common</module>
@@ -23,11 +24,44 @@
         <module>car-customer</module>
         <module>car-gateway</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-gateway</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-order-def</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-customer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.car.cn</groupId>
+                <artifactId>car-order</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
